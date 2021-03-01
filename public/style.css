@@ -1,0 +1,106 @@
+.container {
+  width: 50%;
+}
+
+.review-list {
+  width: 319px;
+
+
+}
+.div-rating {
+  display: flex;
+  position: center;
+  margin-bottom: 8px;
+}
+.review-h1 {
+  font-size: 11px;
+  margin-top: 19px;
+  margin-left: 7px;
+  font-family: Helvetica, Arial, sans-serif, Symbol;
+}
+
+#fa {
+  font-size: 18px;
+}
+.review-time {
+  margin-top: 11px;
+  margin-left: 23em;
+  font-family: Helvetica, Arial, sans-serif, Symbol;
+  font-size: 8px;
+}
+.review-user {
+  margin-top: -2px;
+}
+.review-item {
+  margin-bottom: 9px;
+}
+.review-paragraph {
+  font-family: Helvetica, Arial, sans-serif, Symbol;
+  font-size: 10px;
+  font-weight: 750;
+}
+.review-answer {
+  font-family: Helvetica, Arial, sans-serif, Symbol;
+  margin-bottom: 9px;
+  font-size: 9px;
+}
+.helpful-div {
+  display: flex;
+  margin-bottom: 9px;
+}
+.helpful-word {
+  font-family: Helvetica, Arial, sans-serif, Symbol;
+  font-size: 8px;
+}
+.btn-yes {
+  font-family: Helvetica, Arial, sans-serif, Symbol;
+  width: 4em;
+  background-color: white;
+  font-size: 8px;
+  border: none;
+  outline: none;
+ 
+  margin-left: 8px;
+  margin-top: 0px;
+  border:20px;
+  text-decoration-line: underline;
+  text-decoration-color: black;
+  color:black
+}
+
+.btn-report {
+  background-color: white;
+  font-size: 8px;
+  border: none;
+  outline: none;
+  width: 4em;
+    margin-left: 8px;
+    margin-top: 0px;
+  text-decoration-line: underline;
+  text-decoration-color: black;
+  color:black
+}
+#dropdownMenuButton {
+  font-size: 8px;
+  border: 4px;
+  color: black;
+  background-color: white;
+  font-family: Helvetica, Arial, sans-serif, Symbol;
+  margin-top: 11px;
+}
+hr {
+  width: 319px;
+  text-align: left;
+  margin-left: 0;
+}
+.vl {
+  border-left: 1px solid grey;
+
+  position: absolute;
+
+  margin-left: 70px;
+  height: 10px;
+}
+.div-button{
+  display:flex
+}
