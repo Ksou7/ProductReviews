@@ -3,14 +3,18 @@
 }
 
 .review-list {
-  width: 319px;
-
+  width: 23rem;
+  display: flex;
 
 }
 .div-rating {
   display: flex;
   position: center;
   margin-bottom: 8px;
+
+}
+.rating-div{
+    width: 5rem;
 }
 .review-h1 {
   font-size: 11px;
@@ -27,12 +31,19 @@
   margin-left: 23em;
   font-family: Helvetica, Arial, sans-serif, Symbol;
   font-size: 8px;
+  width: 9rem;
+}
+.div-time{
+  margin-right: 16rem;
+
 }
 .review-user {
   margin-top: -2px;
 }
 .review-item {
   margin-bottom: 9px;
+  width: 23rem;
+
 }
 .review-paragraph {
   font-family: Helvetica, Arial, sans-serif, Symbol;
@@ -43,6 +54,7 @@
   font-family: Helvetica, Arial, sans-serif, Symbol;
   margin-bottom: 9px;
   font-size: 9px;
+  color: grey;
 }
 .helpful-div {
   display: flex;
@@ -51,6 +63,7 @@
 .helpful-word {
   font-family: Helvetica, Arial, sans-serif, Symbol;
   font-size: 8px;
+  color: grey;
 }
 .btn-yes {
   font-family: Helvetica, Arial, sans-serif, Symbol;
@@ -59,13 +72,13 @@
   font-size: 8px;
   border: none;
   outline: none;
- 
+  cursor: pointer;
   margin-left: 8px;
-  margin-top: 0px;
+  margin-top: 0.49rem;
   border:20px;
   text-decoration-line: underline;
-  text-decoration-color: black;
-  color:black
+  text-decoration-color: grey;
+  color: grey;
 }
 
 .btn-report {
@@ -75,12 +88,13 @@
   outline: none;
   width: 4em;
     margin-left: 8px;
-    margin-top: 0px;
+    margin-top: 0.49rem;
   text-decoration-line: underline;
-  text-decoration-color: black;
-  color:black
+  text-decoration-color: grey;
+  color: grey;
+  cursor: pointer;
 }
-#dropdownMenuButton {
+.MuiButtonBase-root.MuiButton-root.MuiButton-text{
   font-size: 8px;
   border: 4px;
   color: black;
@@ -88,19 +102,51 @@
   font-family: Helvetica, Arial, sans-serif, Symbol;
   margin-top: 11px;
 }
+.MuiButtonBase-root.MuiListItem-root.MuiMenuItem-root.MuiMenuItem-gutters.MuiListItem-gutters.MuiListItem-button{
+  font-size: 8px;
+  border: 4px;
+  color: black;
+  background-color: white;
+  font-family: Helvetica, Arial, sans-serif, Symbol;
+  margin-bottom: 0.1rem;
+
+}
+.MuiButton-label{
+  font-size: 8px;
+  font-family: Helvetica, Arial, sans-serif, Symbol;  
+}
 hr {
-  width: 319px;
+  width: 23rem;
   text-align: left;
   margin-left: 0;
 }
 .vl {
   border-left: 1px solid grey;
-
+  margin-top: 0.4rem;
   position: absolute;
 
-  margin-left: 70px;
+ 
+  margin-left: 3.97rem;;
   height: 10px;
 }
 .div-button{
   display:flex
+}
+.ui button{
+  background-color: white;
+  border-radius:none;
+  font-size: 12px;
+}
+.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.ui.button{
+  border-radius: 0rem;
+  margin-right: 1rem;
+  font-weight:400;
+}
+/* ##################################### */
+.show-more{
+  font-size: 0.5rem;
+    margin-top: 0rem;
+    color: grey;
+    cursor: pointer;
+    font-family: Helvetica, Arial, sans-serif, Symbol;
 }

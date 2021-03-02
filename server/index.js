@@ -11,12 +11,29 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 app.get("/api/reviews", async (req, res) => {
   try {
-    const Authorization = process.env.token_key;
+    const authorization = process.env.token_key;
     const data = await axios.get(
       "https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/reviews?product_id=11135",
       {
         headers: {
-          Authorization: Authorization,
+          Authorization: authorization,
+        },
+      }
+    );
+    res.send(data.data);
+  } catch (e) {
+    console.error(e);
+  }
+});
+app.put("/api/reviews", async (req, res) => {
+  try {
+    const authorization = process.env.token_key;
+    const data = await axios.put(
+      "https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/reviews?product_id=11135",
+      {
+        headers: {
+          Authorization: authorization,
+          helpfulness:req.params.helpfulness
         },
       }
     );

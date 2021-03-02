@@ -17,7 +17,7 @@ class Star extends React.Component {
     const { rating } = this.state;
     
     return (                
-      <div>
+      <div id="rating-div">
        
         <StarRatingComponent 
           name="rate1" 
