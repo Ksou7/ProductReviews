@@ -2,11 +2,16 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import moment from "moment";
 import Star from "./StarRating.jsx";
+import Dropdown from "./Drop-down.jsx";
+import Paragraph from "./paragraph.jsx";
+import Button from '@material-ui/core/Button';
 
 function ReviewList() {
   // Declare a new state variable, which we'll call "count"
   var [list, setList] = useState([]);
-
+  var [Sort, setsort] = useState("relevance");
+  var [yes,setYes]=useState(true)
+  var [help,sethelp]=useState(null)
   //   useEffect(() => {
   //     axios.get(`/api/reviews`).then(data => {
   //       setList(data.data);
@@ -18,13 +23,30 @@ function ReviewList() {
   useEffect(() => {
     const fetchData = () => {
       axios.get(`/api/reviews`).then((data) => {
-        console.log(data.data.results);
+      
         setList((list = data.data.results));
-        console.log(list);
+      
       });
     };
     fetchData();
   }, []);
+    
+
+    //    const sortRating= list.sort((a, b) =>
+    //    list.sort((a, b) => (a.rating > b.rating) ? 1 : -1)
+    //    )
+    //     console.log(sortRating)
+    // const sortHelp = list.sort((a, b) =>
+    //     a.helpfulness > b.helpfulness
+    //       ? 1
+    //       : a.helpfulness === b.helpfulness
+    //       ? a.rating > b.rating
+    //         ? 1
+    //         : -1
+    //       : -1
+    //   )  
+         
+  
   const answer = (list) => {
     if (list.answer) {
       return (
@@ -42,32 +64,23 @@ function ReviewList() {
     <div className="container-div">
       <div className="review-list">
         <h3 className="review-h1">{list.length} reviews sorted by</h3>
-
-        <div class="ui compact selection dropdown">
-          <i class="dropdown icon"></i>
-          <div class="text">Compact</div>
-          <div class="menu">
-            <div class="item">A</div>
-            <div class="item">B</div>
-            <div class="item">C</div>
-          </div>
+        <div>
+          <Dropdown />
         </div>
       </div>
-      {list.map((element, index) => (
+      {list.slice(0,2).map((element, index) => (
         <div key={index}>
           <div className="div-rating">
             <Star star={element.rating} />
-            <p className="review-time">
-              {element.reviewer_name},{moment(element.date).format("ll")}
-            </p>
+            <div className="div-time">
+              <p className="review-time">
+                {element.reviewer_name},{moment(element.date).format("ll")}
+              </p>
+            </div>
           </div>
 
-          <div className="review-item">
-            <h4 className="review-paragraph" maxLength="20">
-              {element.summary}
-            </h4>
-            <p className="review-answer">{element.body}</p>
-          </div>
+          <Paragraph text={element} />
+
           <div>{answer(element)}</div>
           <div className="helpful-div">
             <p className="helpful-word"> helpful?</p>
@@ -80,10 +93,10 @@ function ReviewList() {
       ))}
       <div className="div-button">
         <div>
-          <button className="ui button">Button</button>
+          <Button variant="outlined" className="ui button">MORE REVIEWS</Button>
         </div>
         <div>
-          <button className="ui button">Button</button>
+          <Button  variant="outlined" className="ui button">ADD A REVIEW +</Button>
         </div>
       </div>
     </div>
