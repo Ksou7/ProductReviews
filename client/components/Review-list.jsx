@@ -4,49 +4,36 @@ import moment from "moment";
 import Star from "./StarRating.jsx";
 import Dropdown from "./Drop-down.jsx";
 import Paragraph from "./paragraph.jsx";
-import Button from '@material-ui/core/Button';
-
+import Button from "@material-ui/core/Button";
+import ProductRating from "./productRating.jsx";
 function ReviewList() {
   // Declare a new state variable, which we'll call "count"
-  var [list, setList] = useState([]);
-  var [Sort, setsort] = useState("relevance");
-  var [yes,setYes]=useState(true)
-  var [help,sethelp]=useState(null)
-  //   useEffect(() => {
-  //     axios.get(`/api/reviews`).then(data => {
-  //       setList(data.data);
-  //       console.log(data.data)
 
-  //     })
-  // }, []);
+  var [list, setList] = useState([]);
 
   useEffect(() => {
     const fetchData = () => {
       axios.get(`/api/reviews`).then((data) => {
-      
         setList((list = data.data.results));
-      
       });
     };
     fetchData();
   }, []);
-    
 
-    //    const sortRating= list.sort((a, b) =>
-    //    list.sort((a, b) => (a.rating > b.rating) ? 1 : -1)
-    //    )
-    //     console.log(sortRating)
-    // const sortHelp = list.sort((a, b) =>
-    //     a.helpfulness > b.helpfulness
-    //       ? 1
-    //       : a.helpfulness === b.helpfulness
-    //       ? a.rating > b.rating
-    //         ? 1
-    //         : -1
-    //       : -1
-    //   )  
-         
-  
+  //    const sortRating= list.sort((a, b) =>
+  //    list.sort((a, b) => (a.rating > b.rating) ? 1 : -1)
+  //    )
+  //     console.log(sortRating)
+  // const sortHelp = list.sort((a, b) =>
+  //     a.helpfulness > b.helpfulness
+  //       ? 1
+  //       : a.helpfulness === b.helpfulness
+  //       ? a.rating > b.rating
+  //         ? 1
+  //         : -1
+  //       : -1
+  //   )
+
   const answer = (list) => {
     if (list.answer) {
       return (
@@ -61,14 +48,18 @@ function ReviewList() {
   };
 
   return (
-    <div className="container-div">
+    <div className="container">
+      <div>
+        <ProductRating />
+      </div>
+      <div>
       <div className="review-list">
         <h3 className="review-h1">{list.length} reviews sorted by</h3>
         <div>
           <Dropdown />
         </div>
       </div>
-      {list.slice(0,2).map((element, index) => (
+      {list.slice(0, 2).map((element, index) => (
         <div key={index}>
           <div className="div-rating">
             <Star star={element.rating} />
@@ -93,12 +84,17 @@ function ReviewList() {
       ))}
       <div className="div-button">
         <div>
-          <Button variant="outlined" className="ui button">MORE REVIEWS</Button>
+          <Button variant="outlined" className="ui button">
+            MORE REVIEWS
+          </Button>
         </div>
         <div>
-          <Button  variant="outlined" className="ui button">ADD A REVIEW +</Button>
+          <Button variant="outlined" className="ui button">
+            ADD A REVIEW +
+          </Button>
         </div>
       </div>
+ </div>
     </div>
   );
 }

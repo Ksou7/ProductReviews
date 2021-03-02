@@ -1,5 +1,7 @@
 .container {
-  width: 50%;
+display:flex;
+position:center;
+
 }
 
 .review-list {
@@ -149,4 +151,20 @@ hr {
     color: grey;
     cursor: pointer;
     font-family: Helvetica, Arial, sans-serif, Symbol;
+}
+/* ########################"
+#################"
+#########################"" */
+.div-container{
+  display:flex;
+  margin-right: 5rem;
+}
+.bar{
+  height: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0rem;
+}
+.ui.disabled.progress{
+  background-color: white;
+  height: 0.5rem;
 }
