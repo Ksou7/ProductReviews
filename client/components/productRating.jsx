@@ -14,7 +14,7 @@ const useStyles = makeStyles({
 
 function ProductRating(props) {
   const classes = useStyles();
-  var [list, setList] = useState([]);
+
   var [rate, setRate] = useState(0);
   var [count5, setcount5] = useState(0);
   var [count4, setcount4] = useState(0);
@@ -25,7 +25,7 @@ function ProductRating(props) {
   useEffect(() => {
     axios.get(`/api/reviews`).then((res) => {
       console.log(res.data.results);
-
+      
       var sum = 0;
       var countFive = 0;
       var countFour = 0;
@@ -71,7 +71,7 @@ function ProductRating(props) {
       <StarProduct rate={rate} />
       <div>
         <div className={classes.root}>
-          <h4 className="h4-star">
+          <h4  onClick={props.sortRating}className="h4-star">
             {" "}
             5 stars{" "}
             <LinearProgress variant="determinate" value={count5 * 100} />
