@@ -1,29 +1,29 @@
-.container {
-width: 100%;
-display: flex;
-
+.review-container {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
 }
 
 .review-list {
   width: 23rem;
   display: flex;
-  margin-left:4rem ;
-
+  margin-left: 4rem;
 }
 .div-rating {
   display: flex;
   position: center;
   margin-bottom: 8px;
-
 }
-.rating-div{
-    width: 5rem;
+.rating-div {
+  width: 5rem;
 }
 .review-h1 {
   font-size: 11px;
   margin-top: 19px;
   margin-left: -4rem;
-  font-family:'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
   font-weight: 700;
 }
 
@@ -33,12 +33,12 @@ display: flex;
 .review-time {
   margin-top: 11px;
   margin-left: 23em;
-  font-family:'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
   font-size: 8px;
   width: 9rem;
 }
 
-.arrow-div{
+.arrow-div {
   display: flex;
 }
 
@@ -48,14 +48,9 @@ display: flex;
   display: inline-block;
   padding: 3px;
 
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
-
-
-
-
 
 .review-user {
   margin-top: -2px;
@@ -63,15 +58,14 @@ display: flex;
 .review-item {
   margin-bottom: 9px;
   width: 23rem;
-
 }
 .review-paragraph {
-  font-family: 'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
   font-size: 10px;
   font-weight: 750;
 }
 .review-answer {
-  font-family:'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
   margin-bottom: 9px;
   font-size: 9px;
   color: grey;
@@ -81,13 +75,13 @@ display: flex;
   margin-bottom: 9px;
 }
 .helpful-word {
-  font-family:'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
   font-size: 8px;
   color: grey;
-  margin-top:0.49rem;
+  margin-top: 0.49rem;
 }
 .btn-yes {
-  font-family:'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
   width: 4em;
   background-color: white;
   font-size: 8px;
@@ -96,7 +90,7 @@ display: flex;
   cursor: pointer;
   margin-left: 8px;
   margin-top: 0.49rem;
-  border:20px;
+  border: 20px;
   text-decoration-line: underline;
   text-decoration-color: grey;
   color: grey;
@@ -108,45 +102,42 @@ display: flex;
   border: none;
   outline: none;
   width: 4em;
-    margin-left: 8px;
-    margin-top: 0.49rem;
+  margin-left: 8px;
+  margin-top: 0.49rem;
   text-decoration-line: underline;
   text-decoration-color: grey;
   color: grey;
   cursor: pointer;
 }
-.MuiButtonBase-root.MuiButton-root.MuiButton-text{
+.MuiButtonBase-root.MuiButton-root.MuiButton-text {
   font-size: 8px;
   border: 4px;
   color: black;
   background-color: white;
-  font-family:'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
   margin-top: 11px;
   text-decoration: none;
 }
-.MuiButtonBase-root.MuiListItem-root.MuiMenuItem-root.MuiMenuItem-gutters.MuiListItem-gutters.MuiListItem-button{
+.MuiButtonBase-root.MuiListItem-root.MuiMenuItem-root.MuiMenuItem-gutters.MuiListItem-gutters.MuiListItem-button {
   font-size: 8px;
   border: 4px;
   color: black;
   background-color: white;
-  font-family:'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
   margin-bottom: 0.1rem;
   text-decoration: none;
-  
 }
-.MuiButton-label{
+.MuiButton-label {
   text-transform: lowercase;
-  font-family:'Mukta', sans-serif;  
+  font-family: "Mukta", sans-serif;
   font-weight: 700;
   font-size: 11px;
-  padding: 0; 
+  padding: 0;
   margin-left: -0.9rem;
   margin-top: -0.1rem;
- border: none;
- background: none;
- text-decoration: underline;
-
- 
+  border: none;
+  background: none;
+  text-decoration: underline;
 }
 hr {
   width: 23rem;
@@ -159,63 +150,59 @@ hr {
   position: absolute;
   margin-left: 4.3rem;
   height: 10px;
-
-
 }
-.div-button{
-  display:flex
+.div-button {
+  display: flex;
 }
-.ui button{
+.ui button {
   background-color: white;
-  border-radius:none;
+  border-radius: none;
   font-size: 12px;
 }
-.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.ui.button{
+.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.ui.button {
   border-radius: 0rem;
   margin-right: 1rem;
-  font-weight:400;
-  font-family:'Mukta', sans-serif;
+  font-weight: 400;
+  font-family: "Mukta", sans-serif;
   width: 7rem;
- text-decoration:none;
+  text-decoration: none;
 }
 /* ##################################### */
-.show-more{
+.show-more {
   font-size: 0.5rem;
-    margin-top: 0rem;
-    color: grey;
-    cursor: pointer;
-    font-family:'Mukta', sans-serif;
+  margin-top: 0rem;
+  color: grey;
+  cursor: pointer;
+  font-family: "Mukta", sans-serif;
 }
-.show{
+.show {
   margin-top: -1rem;
 }
 /* ########################"
 #################"
 #########################"" */
-.dv-star-rating{
+.dv-star-rating {
   display: flex;
   margin-top: 0.35rem;
 }
-.div-container{
-  display:flex;
+.div-container {
+  display: flex;
   margin-right: 5rem;
 }
 
-.bar-div{
+.bar-div {
   display: inline-block;
   width: 13rem;
 }
-.h4-star{
+.h4-star {
   font-size: 0.3rem;
-  font-family: 'Mukta', sans-serif;
-
+  font-family: "Mukta", sans-serif;
 }
-.product-div{
+.product-div {
   margin-right: 2rem;
   margin-left: 2rem;
   margin-top: 0.52rem;
-
 }
-.product-rating-container{
-  width:13rem
+.product-rating-container {
+  width: 13rem;
 }

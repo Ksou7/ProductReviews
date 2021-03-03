@@ -62,7 +62,7 @@ function ReviewList() {
   };
 
   return (
-    <div className="container">
+    <div className="review-container">
       <div className="product-div">
         <ProductRating  list={list} sortRating={sortRating} />
       </div>
@@ -104,7 +104,7 @@ function ReviewList() {
           </div>
           <div>
             <Button variant="outlined" className="ui button">
-              ADD A REVIEW +
+              ADD A REVIEW 
             </Button>
           </div>
         </div>

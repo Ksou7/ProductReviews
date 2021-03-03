@@ -3,11 +3,17 @@ const morgan = require("morgan");
 const path = require("path");
 const app = express();
 const port = 3004;
-const env = require("dotenv").config();
 const axios = require("axios");
+// require("dotenv").config();
 
 app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, "../public")));
+
+app.use((req, res, next) => {
+  console.log('I am in service 4')
+  console.log(req.url)
+  next()
+});
 
 app.get("/api/reviews", async (req, res) => {
   try {
@@ -27,5 +33,5 @@ app.get("/api/reviews", async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
+  console.log(`Example app listening at http://localhost:${port}`);
+});
