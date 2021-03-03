@@ -11,12 +11,12 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 app.get("/api/reviews", async (req, res) => {
   try {
-    const authorization = process.env.token_key;
+    const Authorization = process.env.token_key;
     const data = await axios.get(
       "https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/reviews?product_id=11135",
       {
         headers: {
-          Authorization: authorization,
+          Authorization: Authorization,
         },
       }
     );
@@ -25,22 +25,7 @@ app.get("/api/reviews", async (req, res) => {
     console.error(e);
   }
 });
-// app.get("/api/reviews/rating", async (req, res) => {
-//   try {
-//     const Authorization = process.env.token_key;
-//     const data = await axios.get(
-//       "https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/reviews?product_id=11135",
-//       {
-//         headers: {
-//           Authorization: Authorization,
-//         },
-//       }
-//     );
-//     res.send(data.data);
-//   } catch (e) {
-//     console.error(e);
-//   }
-// });
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })

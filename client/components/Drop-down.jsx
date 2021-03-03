@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
-export default function Dropdown() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+export default function Dropdown(props) {
+  const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -17,7 +17,7 @@ export default function Dropdown() {
   return (
     <div>
       <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-        Open Menu
+      relevance
       </Button>
       <Menu
         id="simple-menu"

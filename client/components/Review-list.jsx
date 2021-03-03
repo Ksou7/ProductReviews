@@ -8,8 +8,13 @@ import Button from "@material-ui/core/Button";
 import ProductRating from "./productRating.jsx";
 function ReviewList() {
   // Declare a new state variable, which we'll call "count"
-
+   
   var [list, setList] = useState([]);
+ 
+  var [limit,setLimit] = useState(2)
+ 
+
+
 
   useEffect(() => {
     const fetchData = () => {
@@ -18,21 +23,33 @@ function ReviewList() {
       });
     };
     fetchData();
-  }, []);
+  }, [])
+  const showMore = (e) => {
+    e.preventDefault()
 
-  //    const sortRating= list.sort((a, b) =>
-  //    list.sort((a, b) => (a.rating > b.rating) ? 1 : -1)
-  //    )
-  //     console.log(sortRating)
-  // const sortHelp = list.sort((a, b) =>
-  //     a.helpfulness > b.helpfulness
-  //       ? 1
-  //       : a.helpfulness === b.helpfulness
-  //       ? a.rating > b.rating
-  //         ? 1
-  //         : -1
-  //       : -1
-  //   )
+    if (limit<list.length){
+    setLimit(limit + 2);}
+    if (limit>=list.length){
+      setLimit(limit=2)
+    }
+   
+  }
+
+     const sortRating= list.sort((a, b) =>
+     list.sort((a, b) => (a.rating > b.rating) ? 1 : -1)
+  
+     )
+      console.log(sortRating)
+     const sortHelp = list.sort((a, b) =>
+      a.helpfulness > b.helpfulness
+        ? 1
+        : a.helpfulness === b.helpfulness
+        ? a.rating > b.rating
+          ? 1
+          : -1
+        : -1
+    )
+
 
   const answer = (list) => {
     if (list.answer) {
@@ -46,29 +63,33 @@ function ReviewList() {
       return;
     }
   };
-
+  
+  
   return (
     <div className="container">
-      <div>
+      <div className="product-div">
         <ProductRating />
       </div>
-      <div>
+      <div >
       <div className="review-list">
         <h3 className="review-h1">{list.length} reviews sorted by</h3>
-        <div>
-          <Dropdown />
+        <div className='arrow-div'>
+          <Dropdown  sortHelp={sortHelp} sortRating={ sortRating} list={list} />
+       
         </div>
       </div>
-      {list.slice(0, 2).map((element, index) => (
+      {sortRating.slice(0, limit).map((element, index) => (
         <div key={index}>
           <div className="div-rating">
             <Star star={element.rating} />
             <div className="div-time">
               <p className="review-time">
-                {element.reviewer_name},{moment(element.date).format("ll")}
+                {element.reviewer_name}, {moment(element.date).format("ll")}
               </p>
+          
             </div>
           </div>
+            
 
           <Paragraph text={element} />
 
@@ -77,19 +98,19 @@ function ReviewList() {
             <p className="helpful-word"> helpful?</p>
             <div className="vl"></div>
             <a className="btn-yes">yes({element.helpfulness})</a>
-            <a className="btn-report">report</a>
+            <a className="btn-report">report</a>  
           </div>
           <hr />
         </div>
       ))}
       <div className="div-button">
         <div>
-          <Button variant="outlined" className="ui button">
+          <Button   onClick={showMore} variant="outlined" className="ui button">
             MORE REVIEWS
           </Button>
         </div>
         <div>
-          <Button variant="outlined" className="ui button">
+          <Button  variant="outlined" className="ui button">
             ADD A REVIEW +
           </Button>
         </div>

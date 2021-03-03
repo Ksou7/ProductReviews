@@ -1,22 +1,52 @@
-import React, {useState} from "react";
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import LinearProgress from "@material-ui/core/LinearProgress";
 
+const useStyles = makeStyles({
+  root: {
+    width: "100%",
+  },
+});
 
+export default function Bar(props) {
+  const classes = useStyles();
+  const [progress5, setProgress5] = React.useState(0);
+  const [progress4, setProgress4] = React.useState(0);
+  const [progress3, setProgress3] = React.useState(0);
+  const [progress2, setProgress2] = React.useState(0);
+  const [progress1, setProgress1] = React.useState(0);
 
-
-
-export default function ProgressBar() {
-
-  const [progress, setProgress] = useState(0);
+  React.useEffect(() => {
+    setProgress5((oldProgress) => {
+      if (oldProgress === 100) {
+        return 0;
+      }
+      const diff = props.count1 * 100;
+      return Math.min(oldProgress + diff, 100);
+    });
+    setProgress4((oldProgress) => {
+      if (oldProgress === 100) {
+        return 0;
+      }
+      const diff = 50;
+      return Math.min(oldProgress + diff, 100);
+    });
+  }, []);
 
   return (
-    <div className="ui disabled progress">
-      <div className="bar"></div>
-      <div className="bar"></div>
-      <div className="bar"></div>
-      <div className="bar"></div>
-      <div className="bar"></div>
+    <div className={classes.root}>
+      <div>
+        <LinearProgress variant="determinate" value={70} />
+      </div>
+      <div>
+        <LinearProgress variant="determinate" value={80} />
+      </div>
+      <div>
+        <LinearProgress variant="determinate" value={30} />
+      </div>
+      <LinearProgress variant="determinate" value={20} />
+
+      <LinearProgress variant="determinate" value={50} />
     </div>
   );
 }
-
- 
