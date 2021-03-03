@@ -122,6 +122,7 @@ display: flex;
   background-color: white;
   font-family:'Mukta', sans-serif;
   margin-top: 11px;
+  text-decoration: none;
 }
 .MuiButtonBase-root.MuiListItem-root.MuiMenuItem-root.MuiMenuItem-gutters.MuiListItem-gutters.MuiListItem-button{
   font-size: 8px;
@@ -130,7 +131,8 @@ display: flex;
   background-color: white;
   font-family:'Mukta', sans-serif;
   margin-bottom: 0.1rem;
-
+  text-decoration: none;
+  
 }
 .MuiButton-label{
   text-transform: lowercase;
