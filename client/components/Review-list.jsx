@@ -3,7 +3,7 @@ import axios from "axios";
 import moment from "moment";
 import Star from "./StarRating.jsx";
 import Dropdown from "./Drop-down.jsx";
-import Paragraph from "./paragraph.jsx";
+import Paragraph from "./Paragraph.jsx";
 import Button from "@material-ui/core/Button";
 import ProductRating from "./productRating.jsx";
 function ReviewList() {
@@ -15,7 +15,7 @@ function ReviewList() {
 
   useEffect(() => {
     const fetchData = () => {
-      axios.get(`/api/reviews`).then((data) => {
+      axios.get(`http://206.189.62.246:3004/api/reviews`).then((data) => {
         setList((list = data.data.results));
       });
     };
