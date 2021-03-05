@@ -10,7 +10,7 @@ class StarProduct extends React.Component {
     return (
       <div className="div-container">
           <div className="">
-            <h1 className="">{this.props.rate}</h1>
+            <h1 className="general-rate">{this.props.rate}</h1>
           </div>
         <div id="rating-div">
           <StarRatingComponent

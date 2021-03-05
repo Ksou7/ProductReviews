@@ -10,14 +10,14 @@ app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, "../public")));
 
 app.use((req, res, next) => {
-  console.log('I am in service 4')
-  console.log(req.url)
-  next()
+  console.log("I am in service 4");
+  console.log(req.url);
+  next();
 });
 
 app.get("/api/reviews", async (req, res) => {
   try {
-    const Authorization = "a20487f403954c245e367c9dd6baa3c31a02d7aa";
+    const Authorization = "609929f648ae26575956bd6bc66019f5a9e5a9b3";
     const data = await axios.get(
       "https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/reviews?product_id=11135",
       {
