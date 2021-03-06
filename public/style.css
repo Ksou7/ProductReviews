@@ -189,7 +189,7 @@ hr {
   display: flex;
   margin-right: 5rem;
 }
-
+body{ background-color : blue ;}
 .bar-div {
   display: inline-block;
   width: 13rem;
