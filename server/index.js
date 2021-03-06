@@ -5,6 +5,8 @@ const app = express();
 const port = 3004;
 const axios = require("axios");
 // require("dotenv").config();
+const cors = require("cors");
+app.use(cors());
 
 app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, "../public")));
