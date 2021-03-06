@@ -15,10 +15,10 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/api/reviews", async (req, res) => {
- res.send("effffyfc")
- try {
-    const Authorization = "7afb54b34cb64cd8c7be08626fbc6b7258ee65de1";
+app.get("/reviews", async (req, res) => {
+  res.send("effffyfc");
+  try {
+    const Authorization = "";
     const data = await axios.get(
       "https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/reviews?product_id=11135",
       {
@@ -36,4 +36,3 @@ app.get("/api/reviews", async (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening at http://206.189.62.246:${port}`);
 });
-
