@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   justify-self: center;
+  margin-bottom: 3rem;
 }
 
 .review-list {
@@ -11,16 +12,28 @@
   display: flex;
   margin-left: 4rem;
 }
+
+element.style {
+  transform: translateX(-20%);
+}
+.MuiLinearProgress-bar.MuiLinearProgress-barColorPrimary.MuiLinearProgress-bar1Determinate{
+  height: 1rem !important;
+}
 .div-rating {
   display: flex;
   position: center;
   margin-bottom: 8px;
 }
 .rating-div {
-  width: 5rem;
+  width: 23rem;
+  /* margin-top: -4rem !important; */
+
+}
+.general-rate {
+  font-size: 5rem;
 }
 .review-h1 {
-  font-size: 11px;
+  font-size: 16px;
   margin-top: 19px;
   margin-left: -4rem;
   font-family: "Mukta", sans-serif;
@@ -31,11 +44,11 @@
   font-size: 18px;
 }
 .review-time {
-  margin-top: 11px;
-  margin-left: 23em;
   font-family: "Mukta", sans-serif;
-  font-size: 8px;
-  width: 9rem;
+  font-size: 0.75rem;
+  margin-top: 1rem;
+  margin-top: 1rem;
+  margin-left: 24rem;
 }
 
 .arrow-div {
@@ -61,14 +74,16 @@
 }
 .review-paragraph {
   font-family: "Mukta", sans-serif;
-  font-size: 10px;
+  font-size: 1.25rem;
   font-weight: 750;
+  width: 38rem;
 }
 .review-answer {
   font-family: "Mukta", sans-serif;
   margin-bottom: 9px;
-  font-size: 9px;
   color: grey;
+  font-size: 1.25rem;
+  width: 700px;
 }
 .helpful-div {
   display: flex;
@@ -76,7 +91,7 @@
 }
 .helpful-word {
   font-family: "Mukta", sans-serif;
-  font-size: 8px;
+  font-size: 0.75rem;
   color: grey;
   margin-top: 0.49rem;
 }
@@ -84,7 +99,7 @@
   font-family: "Mukta", sans-serif;
   width: 4em;
   background-color: white;
-  font-size: 8px;
+  font-size: 0.75rem;
   border: none;
   outline: none;
   cursor: pointer;
@@ -98,7 +113,7 @@
 
 .btn-report {
   background-color: white;
-  font-size: 8px;
+  font-size: 0.75rem;
   border: none;
   outline: none;
   width: 4em;
@@ -109,7 +124,11 @@
   color: grey;
   cursor: pointer;
 }
+.MuiLinearProgress-root.MuiLinearProgress-colorPrimary.MuiLinearProgress-determinate {
+  height: 0.5rem;
+}
 .MuiButtonBase-root.MuiButton-root.MuiButton-text {
+  margin-left: 0.75rem;
   font-size: 8px;
   border: 4px;
   color: black;
@@ -118,20 +137,24 @@
   margin-top: 11px;
   text-decoration: none;
 }
+.MuiButtonBase-root.MuiButton-root.MuiButton-outlined.ui.button {
+  min-width: 344px;
+  height: 3rem;
+}
 .MuiButtonBase-root.MuiListItem-root.MuiMenuItem-root.MuiMenuItem-gutters.MuiListItem-gutters.MuiListItem-button {
-  font-size: 8px;
+  font-size: 12px;
   border: 4px;
   color: black;
   background-color: white;
   font-family: "Mukta", sans-serif;
   margin-bottom: 0.1rem;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .MuiButton-label {
   text-transform: lowercase;
   font-family: "Mukta", sans-serif;
   font-weight: 700;
-  font-size: 11px;
+  font-size: 15px;
   padding: 0;
   margin-left: -0.9rem;
   margin-top: -0.1rem;
@@ -139,14 +162,15 @@
   background: none;
   text-decoration: underline;
 }
+
 hr {
-  width: 23rem;
+  width: 700px;
   text-align: left;
   margin-left: 0;
 }
 .vl {
-  border-left: 1px solid grey;
-  margin-top: 0.4rem;
+  margin-left: 6rem;
+  margin-top: 0.7rem;
   position: absolute;
   margin-left: 4.3rem;
   height: 10px;
@@ -169,7 +193,7 @@ hr {
 }
 /* ##################################### */
 .show-more {
-  font-size: 0.5rem;
+  font-size: 1rem;
   margin-top: 0rem;
   color: grey;
   cursor: pointer;
@@ -178,31 +202,43 @@ hr {
 .show {
   margin-top: -1rem;
 }
+
+ .MuiLinearProgress-bar.MuiLinearProgress-barColorPrimary.MuiLinearProgress-bar1Determinate {
+  height: 0.25rem;
+ }
+
 /* ########################"
 #################"
 #########################"" */
 .dv-star-rating {
   display: flex;
-  margin-top: 0.35rem;
+  width: 23rem;
+  margin-left: -14.25rem;
+  margin-top: -0.1rem;
+}
+i {
+  font-size: 2rem;
 }
 .div-container {
   display: flex;
   margin-right: 5rem;
+  width: 23rem;
 }
-body{ background-color : blue ;}
+
 .bar-div {
   display: inline-block;
-  width: 13rem;
+  width: 23rem;
+  width: 23rem;
 }
 .h4-star {
-  font-size: 0.3rem;
+  font-size: 0.7rem;
   font-family: "Mukta", sans-serif;
+  height: 1.25rem;
+  width: 20rem;
 }
 .product-div {
   margin-right: 2rem;
   margin-left: 2rem;
   margin-top: 0.52rem;
-}
-.product-rating-container {
-  width: 13rem;
+  width: 23rem;
 }

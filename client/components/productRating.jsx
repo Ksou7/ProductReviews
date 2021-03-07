@@ -23,7 +23,7 @@ function ProductRating(props) {
   var [count1, setcount1] = useState(0);
 
   useEffect(() => {
-    axios.get(`/api/reviews`).then((res) => {
+    axios.get('/reviews').then((res) => {
       console.log(res.data.results);
       
       var sum = 0;

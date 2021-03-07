@@ -10,11 +10,7 @@ const useStyles = makeStyles({
 
 export default function Bar(props) {
   const classes = useStyles();
-  const [progress5, setProgress5] = React.useState(0);
-  const [progress4, setProgress4] = React.useState(0);
-  const [progress3, setProgress3] = React.useState(0);
-  const [progress2, setProgress2] = React.useState(0);
-  const [progress1, setProgress1] = React.useState(0);
+
 
   React.useEffect(() => {
     setProgress5((oldProgress) => {
@@ -36,7 +32,7 @@ export default function Bar(props) {
   return (
     <div className={classes.root}>
       <div>
-        <LinearProgress variant="determinate" value={70} />
+        <LinearProgress list={props.list} variant="determinate" value={70} />
       </div>
       <div>
         <LinearProgress variant="determinate" value={80} />

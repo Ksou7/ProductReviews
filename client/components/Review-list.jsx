@@ -15,7 +15,7 @@ function ReviewList() {
 
   useEffect(() => {
     const fetchData = () => {
-      axios.get(`http://206.189.62.246:3004/reviews`).then((data) => {
+      axios.get("/reviews").then((data) => {
         setList((list = data.data.results));
       });
     };
@@ -98,12 +98,12 @@ function ReviewList() {
         ))}
         <div className="div-button">
           <div>
-            <Button onClick={showMore} variant="outlined" className="ui button">
+            <Button  id="button-fix " onClick={showMore} variant="outlined" className="ui button">
               MORE REVIEWS
-            </Button>
+            </ Button>
           </div>
           <div>
-            <Button variant="outlined" className="ui button">
+            <Button id="button-fix "  variant="outlined" className="ui button">
               ADD A REVIEW 
             </Button>
           </div>
