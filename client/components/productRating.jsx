@@ -23,7 +23,7 @@ function ProductRating(props) {
   var [count1, setcount1] = useState(0);
 
   useEffect(() => {
-    axios.get('/reviews').then((res) => {
+    axios.get('http://206.189.62.246:3004/reviews').then((res) => {
       console.log(res.data.results);
       
       var sum = 0;

@@ -15,7 +15,7 @@ function ReviewList() {
 
   useEffect(() => {
     const fetchData = () => {
-      axios.get("/reviews").then((data) => {
+      axios.get("http://206.189.62.246:3004/reviews").then((data) => {
         setList((list = data.data.results));
       });
     };
